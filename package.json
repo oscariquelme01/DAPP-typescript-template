@@ -1,15 +1,20 @@
 {
-  "name": "template",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "hardhat": "^2.11.2"
-  }
+    "name": "template",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "npm run clean && npx tsc",
+        "clean": "rimraf ./build"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "hardhat": "^2.11.2",
+        "rimraf": "^3.0.2"
+    },
+    "dependencies": {
+        "typescript": "^4.8.3"
+    }
 }
