@@ -17,7 +17,7 @@
         "test",
         "node_modules",
         "scripts",
-        "build",
+        "dist",
         "webpack"
     ]
 }
