@@ -4,18 +4,24 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "build": "npm run clean && npx tsc",
-        "clean": "rimraf ./build",
+        "clean": "rimraf ./dist",
+        "start": "webpack serve --config webpack/webpack.dev.js",
+        "build": "npm run clean && webpack --config webpack/webpack.prod.js",
         "start:dev": "nodemon"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "copy-webpack-plugin": "^11.0.0",
         "hardhat": "^2.11.2",
+        "html-webpack-plugin": "^5.5.0",
         "nodemon": "^2.0.20",
         "rimraf": "^3.0.2",
-        "ts-node": "^10.9.1"
+        "ts-loader": "^9.4.0",
+        "ts-node": "^10.9.1",
+        "webpack-cli": "^4.10.0",
+        "webpack-dev-server": "^4.11.1"
     },
     "dependencies": {
         "typescript": "^4.8.3"
